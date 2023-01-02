@@ -1,6 +1,6 @@
 from rest_framework import generics, permissions
 from django_filters.rest_framework import DjangoFilterBackend
-from socials.drf_api.permissions import IsOwnerOrReadOnly
+from socials_drf_api.permissions import IsOwnerOrReadOnly
 from .models import Comment
 from .serializers import CommentSerializer, CommentDetailSerializer
 
