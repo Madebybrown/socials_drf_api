@@ -45,11 +45,11 @@ class ProfileDetail(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def delete(self, request, pk):
-        profile = self.get_object(pk)
-        self.check_object_permissions(request, profile)
-        serializer = ProfileSerializer(
-            profile, context={'request': request}
-        )
-        profile.delete()
-        return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
+    # def delete(self, request, pk):
+    #     profile = self.get_object(pk)
+    #     self.check_object_permissions(request, profile)
+    #     serializer = ProfileSerializer(
+    #         profile, context={'request': request}
+    #     )
+    #     profile.delete()
+    #     return Response(serializer.data, status=status.HTTP_204_NO_CONTENT)
